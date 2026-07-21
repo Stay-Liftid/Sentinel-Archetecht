@@ -1,12 +1,12 @@
 # Sentinel Security Protocol
 
-**True digital sovereignty through Faraday-grade isolation, autonomous mathematical verification, physical-reality anchoring, recursive AI governance, and local-first Edge AI. No tracking, backdoors, or data extraction. Your device becomes an impenetrable sovereign vault — the architectural reversal of surveillance capitalism.**
+**True digital sovereignty via Faraday-grade isolation, autonomous mathematical verification, physical-reality anchoring, recursive AI governance, and local-first Edge AI. No tracking, backdoors, or data extraction. Your device becomes an impenetrable sovereign vault — the architectural reversal of surveillance capitalism.**
 
 ## Overview
 
-The Sentinel Security Protocol is a conceptual sovereign digital infrastructure for true data sovereignty.
+The **Sentinel Security Protocol** is a conceptual framework for sovereign digital infrastructure.
 
-It combines multiple protective layers including physical isolation, mathematical verification, recursive AI governance, and local-first Edge AI processing.
+It focuses on layered protection through physical isolation, mathematical verification, recursive AI governance, and local-first processing.
 
 ## Documentation
 
@@ -14,11 +14,11 @@ It combines multiple protective layers including physical isolation, mathematica
 - [High-Level Architecture](docs/architecture.md)
 - [Core Principles](docs/principles.md)
 
-## Status
+## Current Status
 
-This repository contains the **public, non-proprietary** conceptual framework.
+This repository contains the **public, non-proprietary** conceptual work.
 
-Detailed technical implementations remain private.
+Detailed technical implementations and proprietary mechanisms are not published here.
 
 ## License
 
