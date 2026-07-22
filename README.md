@@ -6,12 +6,6 @@
 
 <br>
 
-<div align="center">
-
-<div align="center">
-  <img src="https://github.com/Sentinel-Archetecht/The-Remote-Viewer/raw/main/TheRemoteViewer.jpg" 
-       width="80%" 
-       alt="The Remote Viewer">
 </div>
 
 <br>
