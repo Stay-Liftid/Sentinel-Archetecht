@@ -20,6 +20,6 @@ This repository contains the **public, non-proprietary** conceptual work.
 
 Detailed technical implementations and proprietary mechanisms are not published here.
 
-## License
+##License: All Rights Reserved. Published strictly for peer security review and prior art verification. No permission is granted to compile, execute, modify, or distribute.
 
-Apache-2.0
+
