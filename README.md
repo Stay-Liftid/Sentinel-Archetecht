@@ -1,4 +1,9 @@
--54geiv.jpg
+<div align="center">
+  <img src="https://github.com/Sentinel-Archetecht/The-Remote-Viewer/raw/main/-54geiv.jpg" 
+       width="65%" 
+       alt="The Remote Viewer">
+  <br><br>
+</div>
 
 A local-first, zero-trust DApp built for data sovereignty.
 ​Core Features:
