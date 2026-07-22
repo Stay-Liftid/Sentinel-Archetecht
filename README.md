@@ -27,6 +27,7 @@
 - **Network**: Peer-to-peer libp2p mesh
 
 ---
+https://signal.me/#eu/67sOtMSgStX08J_CAc7U8Dnh86lLDW1Rgk1xQW6PrkKlwfwQKERE_KawgjnPtIAI
 
 ### License
 Copyright (c) 2026. All Rights Reserved.  
