@@ -3,7 +3,7 @@
        width="100%" 
        alt="Sovereign Remote Viewer">
   <br><br>
-</div>
+</div> 
 
 A local-first, zero-trust DApp built for data sovereignty.
 ​Core Features:
