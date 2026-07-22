@@ -1,4 +1,4 @@
-
+-54geiv.jpg
 
 A local-first, zero-trust DApp built for data sovereignty.
 ​Core Features:
