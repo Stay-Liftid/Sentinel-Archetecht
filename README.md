@@ -1,3 +1,8 @@
+<div align="center">
+  <img src="https://github.com/Sentinel-Archetecht/Sentinel-Archetecht/raw/main/your-image-name.jpg" width="100%" alt="Sovereign Remote Viewer">
+</div>
+
+<br>
 A local-first, zero-trust DApp built for data sovereignty.
 ​Core Features:
 ​Security: eBPF kernel hooks & TPM 2.0 attestation
