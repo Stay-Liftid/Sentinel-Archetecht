@@ -4,7 +4,6 @@
        alt="Sovereign Remote Viewer">
   <br><br>
 </div>
-
 A local-first, zero-trust DApp built for data sovereignty.
 ​Core Features:
 ​Security: eBPF kernel hooks & TPM 2.0 attestation
