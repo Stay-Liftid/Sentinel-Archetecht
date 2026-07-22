@@ -5,6 +5,15 @@
   <br><br>
 </div>
 
+<div align="center">
+
+![Profile Views](https://komarev.com/ghpvc/?username=Sentinel-Archetecht&color=39FF14&labelColor=0A0A0A&style=flat-square)
+
+![License](https://img.shields.io/badge/License-Proprietary-red?style=flat-square)
+![GitHub Repo Size](https://img.shields.io/github/repo-size/Sentinel-Archetecht/The-Remote-Viewer?style=flat-square)
+![Last Commit](https://img.shields.io/github/last-commit/Sentinel-Archetecht/The-Remote-Viewer?style=flat-square)
+
+</div>
 
 A local-first, zero-trust DApp built for data sovereignty.
 ​Core Features:
