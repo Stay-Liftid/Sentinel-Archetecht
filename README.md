@@ -29,20 +29,17 @@ This project is used for defensive security research. All access and interaction
 ### Getting Started
 *Coming soon*
 
-### Contributing
-Contributions and responsible research are welcome.
 
 ### License
-Copyright (c) 2026. All Rights Reserved.
+Copyright (c) 2026. All Rights Reserved
 
-### Getting Started
-(You can add real or placeholder installation instructions here later)
+★★★★★★★★†
 
 ### Roadmap
-- [ ] Core protocol implementation
-- [ ] Post-quantum crypto integration
-- [ ] Spatial authentication module
-- [ ] Production hardening & audit
+»[ ] Core protocol implementation
+» [ ] Post-quantum crypto integration
+» [ ] Spatial authentication module
+» [ ] Production hardening & audit
 
 ### Contributing
 Contributions, research, and responsible security testing are welcome.
