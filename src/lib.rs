@@ -3,6 +3,13 @@ use std::sync::{Arc, Mutex};
 use std::time::{SystemTime, UNIX_EPOCH};
 
 #[derive(Debug, Clone)]
+pub struct AuditLogEntry {
+    pub timestamp: f64,
+    pub identity_key: String,
+    pub state: String,
+}
+
+#[derive(Debug, Clone)]
 pub struct EventMetrics {
     pub hit_count: u64,
     pub first_seen: f64,
@@ -25,6 +32,7 @@ pub struct AttackDetection {
     anomaly_threshold: Arc<Mutex<f64>>,
     learning_mode: Arc<Mutex<bool>>,
     state_registry: Arc<Mutex<HashMap<String, EventMetrics>>>,
+    audit_log: Arc<Mutex<Vec<AuditLogEntry>>>,
 }
 
 impl AttackDetection {
@@ -33,6 +41,7 @@ impl AttackDetection {
             anomaly_threshold: Arc::new(Mutex::new(anomaly_threshold)),
             learning_mode: Arc::new(Mutex::new(false)),
             state_registry: Arc::new(Mutex::new(HashMap::new())),
+            audit_log: Arc::new(Mutex::new(Vec::new())),
         }
     }
 
@@ -47,6 +56,7 @@ impl AttackDetection {
         let mut threshold = self.anomaly_threshold.lock().unwrap();
         let mut learning = self.learning_mode.lock().unwrap();
         let mut registry = self.state_registry.lock().unwrap();
+        let mut log = self.audit_log.lock().unwrap();
 
         let execution_state = if *threshold > 0.0 {
             if !*learning {
@@ -59,6 +69,13 @@ impl AttackDetection {
         } else {
             "NO_ALERT_NORMAL".to_string()
         };
+
+        // Record the immutable audit log entry
+        log.push(AuditLogEntry {
+            timestamp: event_timestamp,
+            identity_key: registry_key.clone(),
+            state: execution_state.clone(),
+        });
 
         let metrics = registry.entry(registry_key.clone()).or_insert_with(|| EventMetrics {
             hit_count: 0,
@@ -85,5 +102,10 @@ impl AttackDetection {
         let registry_key = format!("{}:{}", source_ip, attack_type);
         let registry = self.state_registry.lock().unwrap();
         registry.get(&registry_key).cloned()
+    }
+
+    pub fn get_audit_log(&self) -> Vec<AuditLogEntry> {
+        let log = self.audit_log.lock().unwrap();
+        log.clone()
     }
 }
