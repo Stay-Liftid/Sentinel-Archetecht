@@ -1,0 +1,72 @@
+#!/usr/bin/env python3
+import subprocess
+import numpy as np
+import sys
+import time
+import os
+import signal
+
+FREQ = "915000000"
+RATE = "2048000"
+# Utilizing internal storage exclusively
+TMP_DIR = os.environ.get("PREFIX", "/data/data/com.termux/files/usr") + "/tmp"
+
+def setup_hardware():
+    subprocess.run(["termux-wake-lock"], check=True)
+    
+    result = subprocess.run(["termux-usb", "-l"], capture_output=True, text=True)
+    devices = result.stdout.strip().split('\n')
+    
+    if not devices or not devices[0]:
+        sys.exit("FATAL: No RTL-SDR detected. Verify connection.")
+        
+    usb_dev = devices[0]
+    
+    # Force OS permission request layer
+    subprocess.run(["termux-usb", "-r", usb_dev], check=True)
+    time.sleep(1.5) 
+    
+    return usb_dev
+
+def stream_sdr(usb_dev):
+    # termux-usb passes the integer file descriptor to the wrapper as $1.
+    # The Termux-patched rtl_sdr accepts this FD via the -d flag.
+    wrapper_path = os.path.join(TMP_DIR, "rtl_wrapper.sh")
+    
+    with open(wrapper_path, "w") as f:
+        f.write(f'#!/bin/sh\nexec rtl_sdr -d "$1" -f {FREQ} -s {RATE} -\n')
+    os.chmod(wrapper_path, 0o755)
+
+    cmd = ["termux-usb", "-e", wrapper_path, usb_dev]
+    process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    
+    def cleanup(signum, frame):
+        process.terminate()
+        subprocess.run(["termux-wake-unlock"])
+        if os.path.exists(wrapper_path):
+            os.remove(wrapper_path)
+        sys.exit(0)
+
+    signal.signal(signal.SIGINT, cleanup)
+    signal.signal(signal.SIGTERM, cleanup)
+
+    try:
+        while True:
+            raw_data = process.stdout.read(8192)
+            if not raw_data:
+                break
+            
+            iq = np.frombuffer(raw_data, dtype=np.uint8).astype(np.float32)
+            
+            # DC-centering and complex normalization
+            complex_iq = (iq[0::2] - 127.5) / 127.5 + 1j * ((iq[1::2] - 127.5) / 127.5)
+            
+            # Telemetry ingestion routing goes here
+            
+    except Exception as e:
+        sys.stderr.write(f"Stream interrupt: {e}\n")
+        cleanup(None, None)
+
+if __name__ == "__main__":
+    dev = setup_hardware()
+    stream_sdr(dev)
