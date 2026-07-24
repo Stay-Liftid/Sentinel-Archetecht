@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Remote Viewer - Topology & Spectrum</title>
+    <!-- Use local copy of vis-network.min.js for zero-trust -->
+    <script src="js/vis-network.min.js"></script>
+    <style>
+        body { background: #0a0a0a; color: #00ff00; font-family: monospace; margin: 0; padding: 10px; display: flex; flex-direction: row; height: 100vh; }
+        .panel { border: 1px solid #333; margin: 5px; flex: 1; display: flex; flex-direction: column; }
+        .header { background: #1a1a1a; padding: 10px; border-bottom: 1px solid #333; }
+        #network-canvas { flex: 1; background: #111; }
+        #spectrum-waterfall { flex: 1; background: #000; image-rendering: pixelated; width: 100%; height: 100%; }
+    </style>
+</head>
+<body>
+
+    <div class="panel">
+        <div class="header">Mesh Topology [vis-network]</div>
+        <div id="network-canvas"></div>
+    </div>
+
+    <div class="panel">
+        <div class="header">Spectrum Density [HTML5 Canvas Waterfall]</div>
+        <canvas id="spectrum-waterfall" width="1024" height="512"></canvas>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
