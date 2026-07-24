@@ -1,21 +1,47 @@
-MIT License
-
-Copyright (c) 2026 Sentinel-Archetecht
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+# The Remote Viewer Source-Available Master License
+Copyright (c) 2026 The Sentinel Architect. All rights reserved.
+This software, **The Remote Viewer**, and its associated source code, protocols, compiled binaries, documentation, and architecture specifications are protected under this Custom Source-Available Master License. By accessing, inspecting, compiling, or executing the software, you agree to be strictly bound by all terms set forth below.
+### 1. Permitted Actions
+ * **Inspection and Auditing:** You may read, analyze, and review the source code locally solely to verify security, privacy, and zero-trust integrity.
+ * **Local Execution:** You may compile and run the software exclusively for personal, non-commercial, or internal private use.
+ * **Private Modification:** You may alter the codebase strictly for private, non-distributed personal adjustments and debugging.
+### 2. Prohibited Actions
+ * **Commercial Recreation:** Selling, licensing, renting, leasing, or otherwise monetizing the software, its core architecture, or direct derivatives is strictly forbidden.
+ * **Unauthorized Derivative Works:** Publicly distributing, publishing, or sharing modified versions, ports, or secondary projects derived from the codebase without explicit prior authorization is prohibited.
+ * **Proprietary Integration:** Embedding, bundling, or linking the source code into closed-source, commercial, or proprietary software products or services is banned.
+ * **Managed Service Provision:** Offering the software, or any derivative of it, as a hosted, paid, or public-facing service (SaaS, BaaS, or application service provider model) to third parties is prohibited.
+ * **Notice Tampering:** Removing, altering, or obfuscating any copyright notices, licensing terms, or authorship attributions contained within the repository is forbidden.
+### 3. Network and Protocol Controls
+ * **Consensus Integrity Mandate:** You are prohibited from deploying modified nodes, alternative relay architectures, or patched binaries designed to bypass state verification, inject rogue telemetry, or fragment the decentralized topology.
+ * **State Isolation:** Execution rights are instantly revoked for any instance attempting to spoof node identifiers, manipulate peer discovery, or reroute protocol traffic outside the intended zero-trust parameters.
+ * **Network Fork Penalty:** This license becomes instantly void for any entity or individual that launches a competitive or unauthorized network fork utilizing the core routing logic.
+### 4. Trademark and Brand Governance
+ * **Asset Restriction:** All exclusive rights to the project name ("The Remote Viewer"), logos, visual identifiers, iconography, and associated branding elements remain exclusively with the author.
+ * **Misrepresentation Ban:** Third parties are strictly prohibited from utilizing project nomenclature, brand assets, or confusingly similar titles in commercial offerings, secondary forks, or public repositories.
+ * **Attribution Control:** You may not imply official project endorsement, partnership, or core developer affiliation for any external work or derivative distribution.
+### 5. Reverse Engineering and Logic Protection
+ * **Decompilation Ban:** Disassembling, decompiling, symbol stripping, or runtime inspection of compiled binaries, packages, or cryptographic wrappers is prohibited.
+ * **Heuristic Derivation Block:** The use of automated static analysis, dynamic binary instrumentation, or manual inspection to map internal state machines, memory structures, or proprietary algorithmic logic is barred.
+ * **Remediation:** Any detected breach of reverse engineering constraints mandates the immediate, permanent destruction of all local copies, binaries, and derived technical specifications.
+### 6. Liability, Abuse, and Compliance
+ * **Absolute Warranty Disclaimer:** The software is provided "AS-IS," without warranty of any kind, express or implied, including merchantability, fitness for a particular purpose, and non-infringement. The user assumes total risk regarding network performance, consensus failure, state corruption, or cryptographic integrity.
+ * **Extreme Limitation of Liability:** In no event shall the author be liable for any direct, indirect, incidental, punitive, or consequential losses, including data loss, hardware failure, or financial disruption. Total liability is strictly limited to zero.
+ * **User Indemnification:** Any third party or user must fully indemnify, defend, and hold harmless the author against all claims, legal fees, or liabilities arising from their deployment, modification, or misuse of the software.
+ * **Anti-Scraping and Endpoint Harvesting:** Automated botnet crawling, RPC node scraping, peer-list harvesting, or bulk data extraction targeting network infrastructure is strictly prohibited.
+ * **Export Compliance:** Users must comply with all local cryptographic software export and import regulations within their respective jurisdictions without ceding sovereign control to corporate entities.
+ * **Patent Retaliation:** All granted rights under this license are automatically revoked if any user or entity initiates patent infringement litigation or legal challenges regarding the architecture.
+### 7. Advanced AI and Vector Ingestion Ban
+ * **Semantic Parsing and RAG Prohibition:** Explicitly bars parsing, indexing, embedding generation, or storing the source code within Retrieval-Augmented Generation (RAG) systems, vector databases, or semantic search engines.
+ * **Dataset Exclusion:** Forbids the inclusion of any part of the codebase, documentation, or protocol architecture into public or private machine-readable training corpora, dataset repositories, or synthetic data pipelines.
+### 8. Injunctive Relief and Irreparable Harm
+ * **Equitable Remedies:** Acknowledges that any breach of source code confidentiality, network protocol control, or trademark governance causes immediate, irreparable harm for which monetary damages are wholly inadequate.
+ * **Immediate Enforcement:** Grants the author the absolute right to seek immediate injunctive relief, specific performance, and temporary restraining orders in any jurisdiction without the requirement of posting a bond.
+### 9. Post-Termination Cryptographic Purge
+ * **Zero-Trace Erasure:** Mandates that upon any license revocation or breach, the offending party must immediately and permanently purge all local copies, cached binaries, memory dumps, distributed ledger states, and derived specifications using secure wiping protocols.
+ * **Audit Verification Waiver:** Authorizes remote protocol-level blacklisting to permanently sever communicating nodes associated with a revoked or breached instance.
+### 10. Vulnerability Brokerage and Exploitation Prohibition
+ * **Broker Market Ban:** Strictly prohibits selling, trading, or disclosing discovered protocol vulnerabilities, cryptographic flaws, or zero-day exploits to bug bounty platforms, vulnerability brokers, private security firms, or state entities.
+ * **Exclusive Private Reporting:** Mandates that any discovered flaw be transmitted solely and directly via private, encrypted channels to the primary author without public exposure.
+### 11. Severability and Survival
+ * **Clause Independence:** Establishes that if any individual provision of this license is held invalid or unenforceable by a court or tribunal, the remaining provisions shall remain in full force and effect.
+ * **Survival of Restrictions:** Prohibitions regarding reverse engineering, AI ingestion, trademark governance, vulnerability disclosure, and liability disclaimers permanently survive any termination of this agreement.
