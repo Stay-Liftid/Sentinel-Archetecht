@@ -1,0 +1,6 @@
+# protocols/remote_viewer.options
+# Enforces strict static struct sizing for the ESP32 build
+
+remoteviewer.TelemetryPacket.node_id max_size:32
+remoteviewer.TelemetryPacket.payload_metrics max_size:512
+remoteviewer.TelemetryPacket.cryptographic_signature max_size:64
